@@ -14,11 +14,18 @@ die();
 
 // create an instance
 $botman = BotManFactory::create($config);
+$keywords = new Keywords();
+$words = $keywords->getKeywords();
 
 // give the bot something to listen for.
-$botman->hears('hello', function (BotMan $bot) {
-    $bot->reply('Hello fuck yourself.');
-});
+foreach ($words as $word)
+{
+    $botman->hears($word, function (BotMan $bot, $word) {
+        $process = new Process();
+        $message = $process->processKeywords($word);
+        $bot->reply($message);
+    });
+}
 
 // start listening
 $botman->listen();
