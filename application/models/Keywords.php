@@ -1,6 +1,6 @@
 <?php
 
-namespace Bot\Models;
+//namespace Bot\Models;
 
 /**
  * Class Keywords
@@ -10,7 +10,7 @@ class Keywords
     /**
      * @var array
      */
-    private $words = array('list' => 1, 'movies' => 2);
+    private $words = array('list', 'movies', 'hello');
 
     /**
      *

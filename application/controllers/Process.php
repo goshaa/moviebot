@@ -1,6 +1,6 @@
 <?php
 
-namespace Bot\Controllers;
+//namespace Bot\Controllers;
 
 /**
  * Class Process
@@ -22,11 +22,13 @@ class Process
         $words = $keywords->getKeywords();
         $answer = new Answer();
         $messages = $answer->getMessages();
-
-        if (isset($words[$keyword]))
+        $message = 'No keyword found';
+        $key = array_search($keyword, $words);
+        if (isset($messages[$key]))
         {
-            $message = $messages[$words[$keyword]];
+            $message = $messages[$key];
         }
+
         return $message;
     }
 }

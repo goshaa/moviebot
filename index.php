@@ -1,10 +1,15 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require "vendor/autoload.php";
 use Mpociot\BotMan\BotManFactory;
 use Mpociot\BotMan\BotMan;
-use \Bot\Models\Keywords;
-use \Bot\Controllers\Process;
+include('application/controllers/Process.php');
+include('application/models/Keywords.php');
+include('application/models/Answer.php');
 
 $config = [
     'telegram_token' => '391088343:AAHp8tEBheJSC9TQ-VB6WPxLZolPru-ZMKw',

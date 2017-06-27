@@ -1,6 +1,6 @@
 <?php
 
-namespace Bot\Models;
+//namespace Bot\Models;
 
 /**
  * Class Answer
@@ -11,8 +11,8 @@ class Answer
      * @var array
      */
     private $messages = array(
-        1 => 'test1',
-        2 => 'test2'
+        'test1',
+        'test2'
     );
 
     /**
