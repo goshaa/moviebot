@@ -17,7 +17,7 @@ $botman = BotManFactory::create($config);
 
 // give the bot something to listen for.
 $botman->hears('hello', function (BotMan $bot) {
-    $bot->reply('Hello yourself.');
+    $bot->reply('Hello fuck yourself.');
 });
 
 // start listening
