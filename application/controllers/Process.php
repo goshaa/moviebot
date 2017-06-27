@@ -1,7 +1,21 @@
 <?php
 
+namespace Bot\Controllers;
+
+/**
+ * Class Process
+ *
+ * @package Bot\Controllers
+ */
 class Process
 {
+    /**
+     *
+     *
+     * @author György Baszarab <baszarab@nexus-netsoft.com>
+     * @param $NXS_TYPE_HINT $keyword $keyword
+     * @return mixed
+     */
     public function processKeywords($keyword)
     {
         $keywords = new Keywords();
@@ -9,9 +23,9 @@ class Process
         $answer = new Answer();
         $messages = $answer->getMessages();
 
-        if (isset($keywords[$keyword]))
+        if (isset($words[$keyword]))
         {
-            $message = $messages[$keywords[$keyword]];
+            $message = $messages[$words[$keyword]];
         }
         return $message;
     }

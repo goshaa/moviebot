@@ -1,5 +1,7 @@
 <?php
 
+namespace Bot\Models;
+
 /**
  * Class Answer
  */
